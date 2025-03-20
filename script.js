@@ -1,6 +1,6 @@
 let tasks = [];
-let isEditing = false; // Flag to track if a task is being edited
-let editIndex = -1;    // To store the index of task being edited
+let isEditing = false; 
+let editIndex = -1;    
 
 function addTask() {
   const taskInput = document.getElementById('new-task');
@@ -37,8 +37,7 @@ function editTask(index) {
   taskInput.value = tasks[index].text;
   deadlineInput.value = tasks[index].deadline;
 
-  isEditing = true; // Flag untuk menunjukkan bahwa kita sedang dalam mode edit
-  editIndex = index;
+  isEditing = true; 
 }
 
 function toggleTaskCompletion(index) {
@@ -124,6 +123,6 @@ document.getElementById('sort-tasks').addEventListener('change', function() {
     tasks.sort((a, b) => b.completed - a.completed);
     renderTasks();
   } else {
-    renderTasks(); // Default sorting
+    renderTasks(); 
   }
 });
