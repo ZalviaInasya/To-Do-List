@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do List</title>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Styling Warna Tombol Pastel Lebih Jelas */
+    .bg-army-green-pastel {
+      background-color: #8AA375; /* Hijau army pastel lebih jelas */
+    }
+
+    .bg-orange-pastel {
+      background-color: #FFAB66; /* Orange pastel lebih kuat */
+    }
+
+    .bg-red-pastel {
+      background-color: #FF6B6B; /* Merah pastel lebih tegas */
+    }
+
+    /* Styling Progress Bar */
+    #progress-bar {
+      height: 10px;
+      background-color: #FBD1D7;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body class="bg-pink-100 flex items-center justify-center h-screen">
+  <!-- Container -->
+  <div class="bg-white rounded-lg shadow-lg p-8 w-1/2">
+    
+    <!-- Quote Section -->
+    <div id="quote" class="text-center text-gray-700 italic mb-4"></div>
+    
+    <!-- Title -->
+    <h1 class="text-4xl text-center font-bold mb-6 text-pink-600">To Do List</h1>
+    
+    <!-- Input Form -->
+    <input id="new-task" type="text" placeholder="Add Assignment..." class="border-2 w-full py-2 px-4 rounded-lg mb-4">
+    
+    <!-- Deadline Input -->
+    <input id="deadline" type="date" class="border-2 w-full py-2 px-4 rounded-lg mb-4">
+
+    <button id="add-task-btn" class="bg-pink-400 hover:bg-pink-500 active:scale-95 transition-transform duration-200 text-white font-bold py-2 px-4 w-full rounded mb-4">
+      Add
+    </button>
+    
+    <!-- Sort Tasks -->
+    <select id="sort-tasks" class="mb-4 bg-pink-300 text-white rounded w-full py-2 px-4">
+      <option value="default">Default</option>
+      <option value="nearest-deadline">Nearest Deadline</option>
+      <option value="completed">Completed</option>
+    </select>
+
+    <!-- Progress Bar -->
+    <div class="text-pink-600 font-bold mb-2">Progress <span id="progress-percent">0%</span></div>
+    <div id="progress-container" class="w-full bg-gray-300 rounded mb-4">
+      <div id="progress-bar" style="width: 0%;"></div>
+    </div>
+
+    <!-- Task List -->
+    <ul id="task-list" class="space-y-4"></ul>
+    
+  </div>
+
+  <!-- Link to external JS -->
+  <script src="script.js"></script>
+</body>
+</html>
